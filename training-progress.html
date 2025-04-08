@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הזנת פרטי אימון</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="training-progress-container">
+        <div class="back-to-dashboard">
+            <a href="dashboard.html">חזרה לעמוד הראשי</a>
+        </div>
+
+        <header>
+            <h1>הזנת פרטי אימון</h1>
+        </header>
+
+        <form id="trainingForm">
+            <table class="training-table" id="trainingTable">
+                <thead>
+                    <tr>
+                        <th>תרגיל</th>
+                        <th>משקל (ק"ג)</th>
+                        <th>עוצמת כח RP (1-10)</th>
+                        <th>סט חימום</th>
+                        <th>סט חימום 2 (אופציונלי)</th>
+                        <th>סט 3</th>
+                        <th>סט 4</th>
+                        <th>סט 5</th>
+                        <th>סט 6 (אופציונלי)</th>
+                        <th>סט 7 (אופציונלי)</th>
+                        <th>פעולות</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="exercise" placeholder="שם התרגיל" required></td>
+                        <td><input type="number" name="weight" placeholder="משקל" required></td>
+                        <td><input type="number" name="rp" min="1" max="10" placeholder="1-10" required></td>
+                        <td><input type="number" name="warmup1" placeholder="מס' חזרות"></td>
+                        <td><input type="number" name="warmup2" placeholder= "מס' חזרות"></td>
+                        <td><input type="number" name="set3" placeholder="חזרה 3"></td>
+                        <td><input type="number" name="set4" placeholder="חזרה 4"></td>
+                        <td><input type="number" name="set5" placeholder="חזרה 5"></td>
+                        <td><input type="number" name="set6" placeholder="חזרה 6"></td>
+                        <td><input type="number" name="set7" placeholder="חזרה 7"></td>
+                        <td><button type="button" class="delete-row-button">מחק</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="form-actions">
+                <button type="button" id="addRowButton" class="training-button small-button">הוסף תרגיל +</button>
+                <button type="submit">שמור נתונים</button>
+            </div>
+        </form>
+        <script src="scripts.js"></script>
+    </div>
+</body>
+</html>

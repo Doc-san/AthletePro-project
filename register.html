@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athlete Pro - הרשמה</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-content">
+      <h1>צור חשבון חדש</h1>
+      <form id="registerForm">
+        <input type="text" id="reg-username" placeholder="שם משתמש" required>
+        <small id="regUsernameMsg" class="validation-msg"></small>
+
+        <input type="email" id="reg-email" placeholder="דואר אלקטרוני" required>
+        <small id="regEmailMsg" class="validation-msg"></small>
+
+        <input type="password" id="reg-password" placeholder="סיסמה" required>
+        <small id="regPasswordMsg" class="validation-msg"></small>
+
+        <input type="password" id="reg-password-confirm" placeholder="אימות סיסמה" required>
+        <small id="regPasswordConfirmMsg" class="validation-msg"></small>
+
+        <button type="submit">הרשמה</button>
+      </form>
+      <p>כבר יש לך חשבון? <a href="login.html">התחבר כאן</a></p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+
+</body>
+</html>

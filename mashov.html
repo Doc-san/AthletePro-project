@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>דף משוב</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="feedback-page">
+  <div class="back-to-dashboard">
+    <a href="dashboard.html">חזרה לעמוד הראשי</a>
+  </div>
+  <div class="feedback-container">
+    <h1>תן לנו משוב</h1>
+    <form id="feedback-form">
+      <div>
+        <label for="name">שם מלא:</label><br>
+        <input type="text" id="name" name="name" placeholder="הכנס את שמך" required>
+        <small id="nameMsg" class="validation-msg"></small>
+      </div>
+      <div>
+        <label for="email">דואר אלקטרוני:</label><br>
+        <input type="email" id="email" name="email" placeholder="הכנס את הדואר האלקטרוני שלך" required>
+        <small id="emailMsg" class="validation-msg"></small>
+      </div>
+      <div class="question">
+        <label for="rating">דרג את השירות שלנו:</label><br>
+        <div class="options">
+          <label><input type="radio" name="rating" value="excellent" required> מרוצה מאוד</label>
+          <label><input type="radio" name="rating" value="good" required> מרוצה</label>
+          <label><input type="radio" name="rating" value="average" required> בינוני</label>
+          <label><input type="radio" name="rating" value="poor" required> לא מרוצה</label>
+          <label><input type="radio" name="rating" value="very-poor" required> לא מרוצה כלל</label>
+        </div>
+        <small id="ratingMsg" class="validation-msg"></small>
+      </div>
+      <div class="question">
+        <label for="service">האם היית מרוצה משירות הלקוחות?</label><br>
+        <div class="options">
+          <label><input type="radio" name="service" value="excellent" required> מרוצה מאוד</label>
+          <label><input type="radio" name="service" value="good" required> מרוצה</label>
+          <label><input type="radio" name="service" value="average" required> בינוני</label>
+          <label><input type="radio" name="service" value="poor" required> לא מרוצה</label>
+          <label><input type="radio" name="service" value="very-poor" required> לא מרוצה כלל</label>
+        </div>
+        <small id="serviceMsg" class="validation-msg"></small>
+      </div>
+      <div class="question">
+        <label for="website">האם האתר היה נוח לשימוש?</label><br>
+        <div class="options">
+          <label><input type="radio" name="website" value="excellent" required> מרוצה מאוד</label>
+          <label><input type="radio" name="website" value="good" required> מרוצה</label>
+          <label><input type="radio" name="website" value="average" required> בינוני</label>
+          <label><input type="radio" name="website" value="poor" required> לא מרוצה</label>
+          <label><input type="radio" name="website" value="very-poor" required> לא מרוצה כלל</label>
+        </div>
+        <small id="websiteMsg" class="validation-msg"></small>
+      </div>
+      <div class="question">
+        <label for="comments">הערות נוספות:</label><br>
+        <textarea id="comments" name="comments" rows="4" placeholder="הכנס את ההערות שלך כאן"></textarea>
+      </div>
+      <div class="question" style="display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" id="consent" name="consent" style="width: 20px; height: 20px;">
+        <label for="consent" style="margin: 0; font-size: 16px;">
+            אני מאשר/ת את השימוש במידע שמסרתי לצורכי שיפור השירות
+        </label>
+    </div>
+      <div class="button-container">
+        <button type="submit" class="submit-button">שלח משוב</button>
+      </div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+
+</body>
+</html>

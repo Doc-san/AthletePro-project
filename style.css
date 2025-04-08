@@ -1,0 +1,771 @@
+body {
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+    background: linear-gradient(to right, #2d2d7b, #38b6ff);
+    color: white;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2d2d7b;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    direction: rtl;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #38b6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2d2d7b;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}
+
+a {
+    color: #38b6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.sidebar {
+    width: 20%;
+    background: #2d2d7b;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    height: 100vh;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #38b6ff;
+}
+
+.dashboard-main {
+    margin-right: 22%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: calc(100% - 22%);
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    color: #2d2d7b;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.cta button {
+    background: #38b6ff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 200px;
+}
+
+.cta button:hover {
+    background: #2d2d7b;
+    transform: scale(1.1);
+}
+
+
+.training-button {
+    display: inline-block;
+    padding: 12px 30px; 
+    background-color: #38b6ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px; 
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.training-button:hover {
+    background-color: #2d2d7b;
+    transform: scale(1.03); 
+}
+
+
+.profile-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #000;
+    margin: auto;
+    direction: rtl;
+    text-align: right;
+}
+
+.profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container form div {
+    margin-bottom: 15px;
+}
+
+.profile-container form input[type="text"],
+.profile-container form input[type="number"],
+.profile-container form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: right;
+}
+
+.profile-container form input[type="submit"] {
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.payment-section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.button-container {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+
+.payment-submit-button {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; 
+    display: inline-block; 
+    width: auto;
+}
+
+.payment-submit-button:hover {
+    background-color: #2575fc; 
+}
+
+
+
+.message-page {
+    background: linear-gradient(to right, #2d2d7b, #38b6ff); 
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.message-container {
+    background-color: white;
+    color: #2d2d7b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.message-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.message-container input,
+.message-container select,
+.message-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: right; 
+}
+
+.message-container button {
+    background: linear-gradient(to right, #38b6ff);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.message-container button:hover {
+    background: linear-gradient(to right, #2d2d7b, #1c1c5a);
+}
+
+#recipient {
+    direction: rtl; 
+    text-align: right; 
+}
+
+
+
+.feedback-page {
+    background: linear-gradient(to right, #2d2d7b, #38b6ff); 
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    direction: rtl; 
+}
+
+.back-to-dashboard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.back-to-dashboard a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: #38b6ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-dashboard a:hover {
+    background: #2d2d7b;
+}
+
+.feedback-page {
+    background: linear-gradient(to right, #2d2d7b, #38b6ff);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    direction: rtl; 
+}
+
+.back-to-dashboard {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.back-to-dashboard a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: #38b6ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-dashboard a:hover {
+    background: #2d2d7b;
+}
+.feedback-page {
+    background: linear-gradient(to right, #2d2d7b, #38b6ff); 
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    direction: rtl; 
+}
+
+
+
+.back-to-dashboard a:hover {
+    background: #2d2d7b;
+}
+
+.feedback-container {
+    background-color: white;
+    color: #2d2d7b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: right; 
+}
+
+
+.feedback-container h1 {
+    text-align: center; 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #2d2d7b; 
+    margin-bottom: 20px; 
+}
+
+
+.feedback-container input,
+.feedback-container select,
+.feedback-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.question {
+    background-color: #ffffffc5; 
+    padding: 15px; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+.question label {
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+
+.submit-button {
+    background: linear-gradient(to right, #38b6ff); 
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #2d2d7b, #1c1c5a);
+}
+
+.about-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #2d2d7b;
+    text-align: center;
+    position: relative;
+}
+
+.about-container header h1 {
+    font-size: 36px;
+    color: #38b6ff;
+    margin-bottom: 20px;
+}
+
+.about-system {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-system ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-system ul li {
+    margin-bottom: 10px;
+}
+.team {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2d2d7b;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    height: 280px; 
+    padding: 10px;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.team-member p {
+    font-size: 16px;
+    margin: 5px 0;
+    text-align: center;
+    direction: ltr;
+    unicode-bidi: embed;
+}
+
+
+
+
+.back-to-dashboard {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.back-to-dashboard a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: #38b6ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-dashboard a:hover {
+    background: #2d2d7b;
+}
+
+.training-progress-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #2d2d7b;
+    text-align: center;
+}
+
+.training-progress-container header h1 {
+    font-size: 36px;
+    color: #38b6ff;
+    margin-bottom: 20px;
+}
+
+.training-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.training-table th,
+.training-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.training-table th {
+    background-color: #38b6ff;
+    color: white;
+}
+
+.training-table td input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    background-color: #38b6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button:hover {
+    background-color: #2d2d7b;
+}
+.validation-msg {
+    display: block;
+    height: 18px;
+    margin-top: 4px;
+    font-size: 14px;
+    text-align: right;
+}
+
+input.valid {
+    border: 2px solid #4CAF50; /* ירוק */
+}
+
+input.invalid {
+    border: 2px solid #F44336; /* אדום */
+}
+
+.validation-msg.valid {
+    color: #4CAF50;
+}
+
+.validation-msg.invalid {
+    color: #F44336;
+}
+/* -- TRAINING PROGRESS PAGE SPECIFIC -- */
+
+.training-progress-container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    color: #2d2d7b;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.training-progress-container header h1 {
+    font-size: 36px;
+    color: #38b6ff;
+    margin-bottom: 20px;
+}
+
+.training-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.training-table th,
+.training-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    white-space: normal; 
+    word-wrap: break-word;
+}
+
+.training-table th {
+    background-color: #38b6ff;
+    color: white;
+    font-weight: bold;
+}
+
+.training-table td input {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    background-color: #38b6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button:hover {
+    background-color: #2d2d7b;
+}
